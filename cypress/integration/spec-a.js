@@ -7,10 +7,10 @@ describe('Example site', () => {
     cy.contains('h1', 'cypress-workshop-ci-example').should('be.visible')
   })
 
-  it('navigates to README', () => {
+  it.only('navigates to README', () => {
     cy.visit('/')
     cy.contains('a', 'README').click()
-    cy.location('pathname').should('match', /\/readme\//i)
+    cy.location('pathname').should('equal', '/README/')
   })
 
   it('goes directly to README', () => {

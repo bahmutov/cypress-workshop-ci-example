@@ -16,7 +16,7 @@ TERM = "xterm"
     group = 'deployed'
   # run Cypress tests before building and deploying
   [plugins.inputs.preBuild]
-    enable = true
+    enable = false
     # call the same commands as we do locally
     start = 'eleventy --serve'
     wait-on = 'http://localhost:8080'
