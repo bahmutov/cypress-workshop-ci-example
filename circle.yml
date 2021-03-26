@@ -8,7 +8,6 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-          install-command: echo 'Everything was already installed'
           start: npm start
           wait-on: 'http://localhost:8080'
           no-workspace: true
