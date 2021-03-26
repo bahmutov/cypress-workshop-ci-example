@@ -7,6 +7,15 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v2
 
+      - name: Cache dependencies 💎
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          # use key string with "v1" for simple cache invalidation
+          # use precise key to avoid cache "snowballing"
+          # https://glebbahmutov.com/blog/do-not-let-cypress-cache-snowball/
+          key: dependencies-v1-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
       - name: Install dependencies 📦
         run: yarn --frozen-lockfile
 
