@@ -5,7 +5,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-latest, ubuntu-latest]
+        containers: [1, 2, 3]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -14,7 +15,9 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v4
         with:
+          build: npx cypress info
           record: true
+          parallel: true
           start: npm start
           wait-on: 'http://localhost:8080'
         env:
