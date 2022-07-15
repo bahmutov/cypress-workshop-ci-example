@@ -1,0 +1,13 @@
+name: ci-nightly
+on:
+  schedule:
+    # runs tests every day at 4am
+    - cron: '0 4 * * *'
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress nightly tests 🌃
+        uses: cypress-io/github-action@v4
