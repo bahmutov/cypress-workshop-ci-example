@@ -5,7 +5,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [macos-latest, windows-latest, ubuntu-latest]
         containers: [1, 2, 3]
     runs-on: ${{ matrix.os }}
     steps:
