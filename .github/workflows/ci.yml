@@ -35,6 +35,6 @@ jobs:
         if: always()
         with:
           name: test-artifacts
-          path:
+          path: |
             cypress/videos
             cypress/screenshots
