@@ -12,4 +12,4 @@ workflows:
           start: npm start
           wait-on: 'http://localhost:8080'
           report: true
-          tags: 'CircleCI'
+          tags: CircleCI
