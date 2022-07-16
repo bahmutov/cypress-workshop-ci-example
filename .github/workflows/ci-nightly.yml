@@ -5,6 +5,10 @@ on:
     - cron: '0 4 * * *'
 jobs:
   nightly:
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
