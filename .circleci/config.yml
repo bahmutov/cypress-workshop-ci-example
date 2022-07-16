@@ -8,7 +8,6 @@ workflows:
       - cypress/install:
           name: Install everything
 
- 
       # "run" is the name of the job defined in Cypress orb
       - cypress/run:
           requires:
@@ -21,18 +20,4 @@ workflows:
           tags: circleci
           parallel: true
           parallelism: 3
-          group: '1. Sanity'
-
-        
-         - cypress/run:
-          requires:
-            - Install everything
-          name: Run Cypress tests
-          start: npm start
-          wait-on: 'http://localhost:8080'
-          no-workspace: true
-          record: true
-          tags: circleci
-          parallel: true
-          parallelism: 3
-          group: '2. All tests'
+          group: 'All tests'
