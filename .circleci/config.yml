@@ -11,3 +11,4 @@ workflows:
           name: Run Cypress tests
           start: npm start
           wait-on: 'http://localhost:8080'
+          report: true
