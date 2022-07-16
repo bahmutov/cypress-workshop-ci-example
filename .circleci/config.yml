@@ -12,10 +12,11 @@ workflows:
       - cypress/run:
           requires:
             - Install everything
-          install-command: echo 'Everything was already installed'
           name: Run Cypress tests
           start: npm start
           wait-on: 'http://localhost:8080'
           no-workspace: true
           record: true
           tags: circleci
+          parallel: true
+          parallelism: 3
