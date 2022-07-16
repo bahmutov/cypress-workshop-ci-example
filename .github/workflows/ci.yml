@@ -18,6 +18,7 @@ jobs:
           parallel: true
           start: npm start
           wait-on: 'http://localhost:8080'
+          tag: Github
         env:
           # pass the record key as environment variable
           # during this CI step
