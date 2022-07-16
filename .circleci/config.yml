@@ -5,8 +5,14 @@ workflows:
   build:
     jobs:
       # "cypress" is the name of the imported orb
+      - cypress/install:
+          name: Install everything
+
       # "run" is the name of the job defined in Cypress orb
       - cypress/run:
+          requires:
+            - Install everything
+          install-command: echo 'Everything was already installed'
           name: Run Cypress tests
           start: npm start
           wait-on: 'http://localhost:8080'
