@@ -2,4 +2,4 @@
 command = "npm run build"
 publish = "_site"
 [[plugins]]
-    package = "netlify-plugin-cypress"
+  package = "netlify-plugin-cypress"
