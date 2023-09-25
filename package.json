@@ -26,7 +26,7 @@
   "homepage": "https://github.com/bahmutov/cypress-workshop-ci-example#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "cypress": "12.13.0",
+    "cypress": "12.17.4",
     "netlify-plugin-cypress": "^2.2.0",
     "prettier": "3.0.3",
     "start-server-and-test": "^2.0.0"
